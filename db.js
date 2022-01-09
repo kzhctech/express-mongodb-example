@@ -1,11 +1,11 @@
 const dotenv = require("dotenv")
 dotenv.config()
 const mongodb = require("mongodb")
-
-mongodb.connect('mongodb+srv://kzhccric:2FQHi2IPGWdllW21@cluster0.v6byg.mongodb.net/kzhcCric?retryWrites=true&w=majority', { useUnifiedTopology: true }, function (err, client) {
 const express = require("express")
 const app = express()
-const client = require("./db.js")
+
+mongodb.connect('mongodb+srv://kzhccric:2FQHi2IPGWdllW21@cluster0.v6byg.mongodb.net/kzhcCric?retryWrites=true&w=majority', { useUnifiedTopology: true }, function (err, client) {
+
 const db = client.db()
 
 app.get("/", async (req, res) => {
